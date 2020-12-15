@@ -1,0 +1,9 @@
+body {
+    background-color: teal;
+    max-width: 800px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+}
