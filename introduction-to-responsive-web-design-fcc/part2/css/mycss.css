@@ -1,0 +1,56 @@
+/* Fonts
+   ---- 
+   font-family: "Lora", serif;
+   font-family: "Ubuntu", sans-serif;
+*/
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* =============
+Typography 
+================*/
+
+h1 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  color: #143774;
+  font-size: 2rem;
+  border: solid red;
+  margin: 0;
+}
+
+.subtitle {
+  font-weight: 700;
+  color: #1792d2;
+  font-size: .75rem;
+  border: solid teal;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  background: f8f8f8;
+  padding: 2em 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /*text-align won't work because the li element is so small (it shrinks to the size of the text inside it, essentially) so text-align will appear like it does nothing*/
+  padding: 0;
+
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
+
+}
+
+nav a:hover {
+
+}
