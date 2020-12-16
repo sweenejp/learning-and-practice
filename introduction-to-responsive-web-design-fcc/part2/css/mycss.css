@@ -1,7 +1,15 @@
+/* variables */
+:root {
+  --blue: #1792d2;
+  --navy: #143774;
+  --gray: #707070;
+  --eggshell: #f8f8f8;
+}
+
 /* Fonts
-   ---- 
-   font-family: "Lora", serif;
-   font-family: "Ubuntu", sans-serif;
+  ---- 
+  font-family: "Lora", serif;
+  font-family: "Ubuntu", sans-serif;
 */
 body {
   margin: 0;
@@ -15,23 +23,40 @@ Typography
 h1 {
   font-family: "Lora", serif;
   font-weight: 400;
-  color: #143774;
+  color: var(--navy);
   font-size: 2rem;
   margin: 0;
 }
 
 .subtitle {
   font-weight: 700;
-  color: #1792d2;
+  color: var(--blue);
   font-size: .75rem;
   margin: 0;
 }
 
+/* =============
+Layout
+================*/
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-nav {
+  display: flex;
+  /* spaces out site-title div and nav div  */
+  justify-content: space-between;
+}
+
 header {
-  text-align: center;
-  background: f8f8f8;
+  background: var(--eggshell);
   padding: 2em 0;
 }
+
+/* navigation */
 
 nav ul {
   list-style: none;
@@ -42,13 +67,42 @@ nav ul {
 }
 
 nav li {
-  margin: 0 1em;
+  /* margin: 0 1em;  -- removing margin on the right lines up the list items with the edge of the container*/ 
+  margin-left: 2em;
 }
 
 nav a {
-
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 700;
+  padding: .25em 0;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
+  /* :focus state is when you tab through elements */
+  color: var(--blue)
+}
 
+.current-page {
+  border-bottom: 1px solid var(--gray);
+}
+
+.current-page:hover {
+  color: var(--gray);
+}
+
+@media (max-width: 675px) {
+  .container-nav {
+    flex-direction: column;
+  }
+  header {
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin: .5em;
+  }
 }
