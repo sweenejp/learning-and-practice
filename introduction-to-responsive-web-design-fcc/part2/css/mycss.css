@@ -17,7 +17,6 @@ h1 {
   font-weight: 400;
   color: #143774;
   font-size: 2rem;
-  border: solid red;
   margin: 0;
 }
 
@@ -25,7 +24,6 @@ h1 {
   font-weight: 700;
   color: #1792d2;
   font-size: .75rem;
-  border: solid teal;
   margin: 0;
 }
 
