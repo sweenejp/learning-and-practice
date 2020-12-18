@@ -11,21 +11,41 @@
   font-family: "Lora", serif;
   font-family: "Ubuntu", sans-serif;
 */
+
 body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
+  color: var(--gray);
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* =============
 Typography 
 ================*/
 
-h1 {
+h1,
+h2 {
   font-family: "Lora", serif;
   font-weight: 400;
   color: var(--navy);
+}
+
+h1 {
   font-size: 2rem;
   margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 300;
 }
 
 .subtitle {
@@ -35,6 +55,25 @@ h1 {
   margin: 0;
 }
 
+.article-continue-reading {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.article-info {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.article-continue-reading:hover,
+.article-continue-reading:focus {
+  color: var(--navy);
+}
+
+
 /* =============
 Layout
 ================*/
@@ -43,17 +82,21 @@ Layout
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .container-nav {
   display: flex;
   /* spaces out site-title div and nav div  */
   justify-content: space-between;
+  flex-direction: column;
 }
 
 header {
   background: var(--eggshell);
-  padding: 2em 0;
+  text-align: center;
+  padding-top: 2em;
 }
 
 /* navigation */
@@ -63,19 +106,13 @@ nav ul {
   display: flex;
   justify-content: center; /*text-align won't work because the li element is so small (it shrinks to the size of the text inside it, essentially) so text-align will appear like it does nothing*/
   padding: 0;
-
-}
-
-nav li {
-  /* margin: 0 1em;  -- removing margin on the right lines up the list items with the edge of the container*/ 
-  margin-left: 2em;
+  flex-direction: column;
 }
 
 nav a {
   text-decoration: none;
   color: var(--gray);
   font-weight: 700;
-  padding: .25em 0;
 }
 
 nav a:hover,
@@ -92,17 +129,37 @@ nav a:focus {
   color: var(--gray);
 }
 
-@media (max-width: 675px) {
-  .container-nav {
-    flex-direction: column;
-  }
+@media (min-width: 700px) {
+  
+  /* header and nav */
+  
   header {
-    text-align: center;
+    padding: 2em 0;
   }
+
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
   }
+
   nav li {
-    margin: .5em;
+    /* margin: 0 1em;  -- removing margin on the right lines up the list items with the edge of the container*/ 
+    margin-left: 2em;
   }
+
+  .container-nav {
+    flex-direction: row;
+  }
+
+  /* main */
+
+  .container {
+    flex-direction: row;
+    border: solid red;
+  }
+
+  main {
+    margin-right: 1em;
+  }
+
+
 }
