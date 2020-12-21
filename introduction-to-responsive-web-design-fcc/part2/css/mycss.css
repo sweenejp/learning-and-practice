@@ -3,7 +3,7 @@
   --blue: #1792d2;
   --navy: #143774;
   --gray: #707070;
-  --eggshell: #f8f8f8;
+  --eggshell: #dadada;
 }
 
 /* Fonts
@@ -23,6 +23,11 @@ body {
 img {
   max-width: 100%;
   display: block;
+  margin-bottom: 1em;
+}
+
+p {
+  margin-top: 0;
 }
 
 /* =============
@@ -92,6 +97,19 @@ strong {
   text-decoration: underline;
 }
 
+.widget-title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.widget-recent-post-title {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 
 /* =============
 Layout
@@ -115,6 +133,18 @@ header {
   text-align: center;
   padding: 2em 2em 0 2em;
   margin-bottom: 3em;
+}
+
+.footer-clip {
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  padding: 3em 0;
+  clip-path: polygon(41% 19%, 100% 6%, 100% 50%, 67% 87%, 0 100%, 0% 50%);
+}
+
+footer p {
+  margin: 0;
 }
 
 /* navigation */
@@ -147,12 +177,40 @@ nav a:focus {
   color: var(--gray);
 }
 
+/***** sidebar ******/
+
+.sidebar-widget {
+    margin: 0 auto 1em auto;
+    padding: 0 1em;
+    border: 8px solid var(--eggshell);
+    width: 50%;
+    /* background-color: violet; */
+}
+
+.widget-recent-posts {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 1em;
+}
+
+.widget-recent-posts:last-child {
+    border: 0;
+    margin: 0;
+}
+
+.widget-image {
+  order: -1;
+}
+
 /***** articles *****/
 
 .article-featured {
   border-bottom: var(--gray) 1px solid;
   padding-bottom: 2em;
   margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
 }
 
 .article-recent {
@@ -163,6 +221,14 @@ nav a:focus {
 
 /* rearranging the order for visual appeal */
 
+.article-image {
+  order: -2;
+}
+
+.article-info {
+  order: -1;
+}
+
 .article-recent-main {
   order: 2;
 }
@@ -171,9 +237,18 @@ nav a:focus {
   order: 1;
 }
 
+.about-me-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me-image {
+  order: -1;
+}
+
 /*======= Media Querries ========*/
 
-@media (min-width: 700px) {
+@media (min-width: 740px) {
   
   /***** header and nav *****/
   
@@ -197,26 +272,33 @@ nav a:focus {
   /***** main *****/
 
   main {
-    width: 75%;
+    width: 70%;
   }
 
-  /***** aside *****/
+  /***** aside and widgets *****/
 
-  aside {
-    width: 20%;
-    margin: 1em;
+  .sidebar {
+    background-color: none;
+    width: 25%;
+    min-width: 200px;
+    margin: 0 0 1em 1em;
   }
 
   .sidebar-widget {
-    padding: 0 1em;
-    border: 8px solid var(--gray);
-    margin-top: 0;
-    margin-bottom: 1em;
+    width: 75%; /* not sure what happened here but needed to make this width about 75% or else the stuff inside the widget spills over to the right */
+    border: 8px solid var(--eggshell);
+    margin-left: 0;
+    margin-right: 0;
   }
-  
-  .widget-body {
-  
+
+  .widget-title {
+    margin-top: .75em;
   }
+
+  .widget-recent-post-title {
+    padding: 0;
+  }
+
 
   /***** articles *****/
 

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lnag="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width-device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap" rel="stylesheet">
   <link href="/introduction-to-responsive-web-design-fcc/part2/css/mycss.css" rel="stylesheet">
 </head>
@@ -15,9 +13,9 @@
       </div>
       <nav>
         <ul>
-          <li><a href="/introduction-to-responsive-web-design-fcc/part2/" class="current-page">Home</a></li>
+          <li><a href="/introduction-to-responsive-web-design-fcc/part2/">Home</a></li>
           <li><a href="/introduction-to-responsive-web-design-fcc/part2/about-me.html">About Me</a></li>
-          <li><a href="/introduction-to-responsive-web-design-fcc/part2/recent-posts.html">Recent Posts</a></li>
+          <li><a href="/introduction-to-responsive-web-design-fcc/part2/recent-posts.html" class="current-page">Recent Posts</a></li>
         </ul>
       </nav>
     </div> <!-- / .containter -->
@@ -25,18 +23,17 @@
 
   <div class="container container-flex">
       <main>
-
-        <!-- featured article -->
-
-        <article class="article-featured">
-          <h2 class="article-title">The Definition of Humility</h2>
-          <p class="article-body"><strong>“You suggest studying harder,</strong> and the student replies: “No, it wouldn’t work for me; I’m not one of the smart kids like you; nay, one so lowly as myself can hope for no better lot.” This is social modesty, not humility. It has to do with regulating status in the tribe, rather than scientific process. If you ask someone to “be more humble,” by default they’ll associate the words to social modesty—which is an intuitive, everyday, ancestrally relevant concept. Scientific humility is a more recent and rarefied invention, and it is not inherently social. Scientific humility is something you would practice even if you were alone in a spacesuit, light years from Earth with no one watching. Or even if you received an absolute guarantee that no one would ever criticize you again, no matter what you said or thought of yourself. You’d still double-check your calculations if you were wise.”<a href="https://www.lesswrong.com/posts/GrDqnMjhqoxiqpQPw/the-proper-use-of-humility"> - Eliezer Yudkowsky</a></p>
-          <a class="article-continue-reading" href="#">Continue reading</a>
-          <p class="article-info">12/12/20</p>
-          <img class="article-image" src="https://static01.nyt.com/images/2019/10/22/science/22SCIHUMILITY/22SCIHUMILITY-mobileMasterAt3x.jpg" alt="humility">
+        <article class="article-recent">
+          <div class="article-recent-main">
+            <h2 class="article-title">The Definition of Humility</h2>
+            <p class="article-body"><strong>“You suggest studying harder,</strong> and the student replies: “No, it wouldn’t work for me; I’m not one of the smart kids like you; nay, one so lowly as myself can hope for no better lot.” This is social modesty, not humility. It has to do with regulating status in the tribe, rather than scientific process. If you ask someone to “be more humble,” by default they’ll associate the words to social modesty—which is an intuitive, everyday, ancestrally relevant concept. Scientific humility is a more recent and rarefied invention, and it is not inherently social. Scientific humility is something you would practice even if you were alone in a spacesuit, light years from Earth with no one watching. Or even if you received an absolute guarantee that no one would ever criticize you again, no matter what you said or thought of yourself. You’d still double-check your calculations if you were wise.”<a href="https://www.lesswrong.com/posts/GrDqnMjhqoxiqpQPw/the-proper-use-of-humility"> - Eliezer Yudkowsky</a></p>
+            <a class="article-continue-reading" href="#">Continue reading</a>
+          </div>
+          <div class="article-recent-secondary">
+            <img class="article-image" src="https://static01.nyt.com/images/2019/10/22/science/22SCIHUMILITY/22SCIHUMILITY-mobileMasterAt3x.jpg" alt="humility">
+            <p class="article-info">12/12/20</p>
+          </div>
         </article>
-
-        <!-- recent articles -->
 
         <article class="article-recent">
           <div class="article-recent-main">
