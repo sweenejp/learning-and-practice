@@ -1,0 +1,151 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Langar", cursive;
+  color: var(--gray);
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  z-index: -1;
+}
+
+/*============
+typography
+============*/
+
+#nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: black;
+  border-radius: 5px;
+  padding: .25em;
+}
+
+/*============
+layout
+============*/
+
+h1,
+h3 {
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+#header {
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1476081718509-d5d0b661a376?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=633&q=80");
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  margin-top: 15em;
+}
+
+.container-nav {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* aligns the items within the header to be centered vertically*/
+}
+
+#header-img {
+  margin: auto;
+  max-height: 7rem;
+  filter: invert(1);
+}
+
+/* navigation */
+
+#nav-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-list li {
+  margin: .5em 0;
+}
+
+/* main */
+
+.section {
+  border: 10px solid brown;
+  border-radius: 1rem;
+  margin-bottom: 3em;
+}
+
+#form {
+  width: 95%;
+  margin: auto;
+}
+
+#form > * {
+  display: block;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.container-75 {
+  margin: 1em auto;
+  width: 75%;
+}
+
+@media (min-width: 700px) {
+  
+  main {
+    margin-top: 7.25em;
+  }
+  
+  .container-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #nav-bar {
+    width: 60%;
+    max-width: 600px;
+  }
+
+  #header-img {
+    margin: 0;
+  }
+
+  #nav-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
