@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  border: solid red;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================
+layout
+=================== */
+
+/* header and navigation */
+
+.header-container {
+  border: solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 4em;
+  grid-column-gap: 5px;
+  grid-template-areas: 
+  " title title img "
+  "nav nav nav ";
+}
+
+#div-img-title {
+  border: solid red;
+  grid-area: img;
+  border-radius: 50%;
+}
+
+#div-img-title img {
+  border-radius: 50%;
+}
+
+.page-title {
+  border: solid gray;
+  grid-area: title;
+  align-self: center;
+}
+nav {
+  border: solid pink;
+  grid-area: nav;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  border: solid blue;
+}
+
+.nav-list-item {
+  border: solid green;
+}
+
+/* main */
+
+.main-container {
+  border: solid teal;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 1em;
+  padding: 5rem ;
+}
+
+.portfolio-item {
+  border: solid pink;
+  height: 350px;
+}
+
+/* footer */
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border: solid gray;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  border: solid orange;
+  height: 2.5rem;
+}
+
+.footer-item {
+  border: solid red;
+}
