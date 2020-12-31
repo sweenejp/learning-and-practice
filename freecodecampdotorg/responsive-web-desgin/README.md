@@ -1,0 +1,1 @@
+These are my projects completed at the end of [freecodecamp.org's](https://www.freecodecamp.org/learn) Responsive Web Design Certification. The final products can also be seen on my [codepen](https://codepen.io/collection/DKYMrL).

@@ -1,0 +1,259 @@
+:root {
+  --primary: #d67369;
+  --secondary: rgb(164, 164, 248);
+}
+
+/* fonts ***************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;700&family=Ubuntu:wght@300;700&display=swap');
+/* 
+font-family: 'Spartan', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+ */
+/* ******************************************* */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==========
+typography
+============= */
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#title {
+  font-family: 'Spartan', sans-serif;
+  font-size: 3rem;
+  color: white;
+}
+
+#subtitle {
+  font-size: 1rem;
+  color: white;
+}
+
+#img-caption {
+  color: white;
+}
+
+#navbar a {
+  padding: 0 5px;
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  /* hover animation borrowed from https://css-tricks.com/having-fun-with-link-hover-effects/ */
+  background: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 100% );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 0px 0px;
+  text-decoration: none;
+  transition: all .8s ease;
+}
+
+#navbar a:hover,
+#navbar a:focus {
+  background-size: 4px 100px;
+}
+
+/* ==========
+layout
+============= */
+#main {
+  max-width: 1550px;
+  margin: auto;
+}
+
+#welcome-section {
+  display: grid;
+  grid-template-columns: 90% 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#title-div {
+  opacity: .5;
+  background-color: var(--primary);
+  grid-area: 1 / 1 / 3 / 2;
+  z-index: 2;
+}
+
+#title {
+  width: 90%;
+  margin: 15% auto 0 auto;
+}
+
+#subtitle {
+  width: 90%;
+  margin: 0 auto 0 auto;
+  text-align: left;
+}
+
+#image-div {
+  grid-area: 1 / 1 / 3 / 3;
+  z-index: 1;
+}
+
+#image {
+  opacity: .3;
+}
+
+#img-caption {
+  /* don't need the caption at small screens */
+  display: none;
+}
+
+/* navigation */
+
+#navbar {
+  grid-area: 2 / 1 / 3 / 2;
+  z-index: 3;
+}
+
+.navbar-list-item {
+  margin: .5em;
+  text-align: center;
+}
+
+#navbar-list {
+  list-style: none;
+  padding: 0;
+  margin: .25rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 486px) {
+
+  /* ******* welcome section ********** */
+
+  #welcome-section {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 5fr) 1fr repeat(2, 5fr);
+    grid-template-rows: 1fr repeat(2, 5fr) 3rem; /* having the last row be a fr unit was tricky. Set it to a constant unit instead*/
+  }
+
+  #title-div {
+    grid-area: 2 / 2 / 4 / 6;
+    opacity: .5;
+
+    /* for centering #title and subtitle vertically (along with `margin: 0 auto 0 auto` under #title and #subtitle */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+    z-index: 2;
+  }
+
+  #image-div {
+    grid-area: 1 / 1 / 5 / 7;
+  }
+
+  /* navigation */
+
+  #navbar {
+    grid-area: 4 / 2 / 5 / 6;
+  }
+
+  #navbar-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar-list-item {
+    margin: 0;
+    text-align: none;
+  }
+}
+
+
+@media (min-width: 895px) {
+
+  #title-div {
+    opacity: .8;
+    grid-area: 2 / 2 / 4 / 5;
+  }
+
+  #title {
+    font-size: 4rem;
+  }
+
+  #image-div {
+    grid-area: 1 / 4 / 5 / 7;
+    position: relative;
+  }
+
+  #img-caption {
+    /* along with `postion: relative` in the #img-div container, the following puts the caption in the bottom right of #img-div */
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 .25em 0 0;
+    z-index: 4;
+  }
+
+  /* navigation */
+
+  #navbar {
+    grid-area: 4 / 2 / 5 / 5;
+    z-index: 3;
+  }
+}
+
+/* User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size. */
+
+/* #tribuite-info {
+  
+}
+
+#tribute-link {
+  
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: tomato;
+}
+
+h2 {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container div {
+  margin: auto;
+  padding: 20px;
+  font-size: 20px;
+  max-width: 400px;
+}
+
+.book-title {
+  font-size: 30px;
+  text-align: center;
+}
+
+@media 812 */

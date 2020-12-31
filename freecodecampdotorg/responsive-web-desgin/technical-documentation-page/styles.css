@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+/* fonts
+
+font-family: 'Bitter', serif;
+
+
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bitter', serif;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*============
+ typography
+ =============*/
+
+ h1 {
+   font-size: 2rem;
+ }
+
+ nav {
+   color: white;
+   background-color: rgb(37, 37, 37);
+ }
+
+ nav a {
+   color: white;
+ }
+
+ nav a:hover,
+ nav a:focus {
+  color: paleturquoise;
+ }
+
+ code {
+   background-color: turquoise;
+   padding: .125em .5em;
+ }
+
+/*============
+layout 
+==============*/
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-areas: 
+  "navbar navbar navbar navbar"
+  "main main main main";
+}
+
+#navbar {
+  grid-area: navbar;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar ul {
+  list-style: none;
+  order: -1;
+  padding: 0;
+}
+
+#navbar li {
+  margin: .5em;
+}
+
+#navbar header {
+  align-self: center;
+  justify-self: center;
+  border: solid white;
+  padding: .5em;
+}
+
+#main-doc {
+  grid-area: main;
+  width: 95%;
+  max-width: 800px;
+  margin: auto;
+}
+
+@media (min-width: 900px) {
+  body {
+    grid-template-areas: 
+    "navbar main main main ";
+  }
+
+  #navbar {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  #navbar ul {
+    order: 0;
+  }
+
+  #main-doc {
+    grid-area: main;
+    width: 95%;
+    max-width: 800px;
+    margin: 1em;
+    padding-right: 2em;
+    border-right: solid turquoise;
+  }
+}
+
+
