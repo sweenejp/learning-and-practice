@@ -1,0 +1,67 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/index.css">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  
+  <body>
+
+    <div id="title-div">
+      <h1 id="title">Add a book to the virtual bookshelf!</h1>
+      
+      <p id="description">Please fill out the form. Make sure to include a link to an image of the book cover!</p>
+    </div>
+    
+    <div id="form-div">
+      <form id="survey-form">
+        
+        <div class="form-div-item">
+          <h2>About you</h2>
+          <div>
+            <div><label for="name" id="name-label">Name: </label><input id="name" type="text" placeholder="Enter your name" required></div>
+            <div><label for="email" id="email-label">Email: </label><input id="email" type="email" placeholder="Enter your email" required></div>
+          </div>
+        </div>
+
+        <div class="form-div-item">
+          <h2>About the book</h2>
+          <div>
+            <div><label for="book-title" id="book-title-label">Book Title: </label><input id="book-title" type="text" placeholder="Title" required></div>
+            <div><label for="book-cover-url" id="book-cover-url-label">Url of the cover: </label><input id="book-cover-url" type="url" placeholder="https://example.com" required></div>
+            <div><label for="number" id="number-label">Your book rating: </label><input id="number" type="number" placeholder="1" required min="1" max="5"></div>
+          </div>
+          <div>
+            <label for="dropdown" id="dropdown-label">Choose a genre: </label>
+            <select id="dropdown" name="genre">
+              <option value="classic">Classic</option>
+              <option value="fantasy">Fantasy</option>
+              <option value="sci-fi">Sci-Fi</option>
+              <option value="historical">Historical</option>
+            </select>
+          </div>
+          <fieldset>
+            <legend class="form-text">Fiction or Non-fiction?</legend>
+            <label for="fiction"><input id="fiction" value="fiction" type="radio" name="fiction-nonfiction"> Fiction</label>
+            <label for="non-fiction"><input id="non-fiction" value="non-fiction" type="radio" name="fiction-nonfiction"> Non-Fiction</label>
+          </fieldset>
+          <fieldset>
+            <legend class="form-text">Which grades is this book appropriate for? (Select all that apply)?</legend>
+            <label for="ninth"> 9th</label><input id="ninth" value="ninth" type="checkbox" name="grade-level">
+            <label for="tenth"> 10th</label><input id="tenth" value="tenth" type="checkbox" name="grade-level">
+            <label for="eleventh"> 11th</label><input id="eleventh" value="eleventh" type="checkbox" name="grade-level">
+            <label for="twelfth">12th</label><input id="twelfth" value="twelfth" type="checkbox" name="grade-level">
+          </fieldset>
+        </div>
+
+        <div class="form-div-item">
+          <p id="recommend-heading" class="form-text">Why do you recommend this book?</p><textarea name="message" rows="8" cols="40" placeholder="Type a brief review of the book."></textarea>
+        </div>
+
+        <div id="submit-button-div">
+          <button id="submit" type="submit">Send your book to the shelf!</button>
+        </div>
+
+      </form>
+    </div>
+
+  </body>
+</html>

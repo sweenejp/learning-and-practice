@@ -12,40 +12,97 @@
 <body id="main">
 
   <section id="welcome-section">
+
     <div id="title-div">
       <h1 id="title">Ursula K.<br>Le Guin</h1>
       <h2 id="subtitle">A tribute to the science fiction writer.</h2>
     </div>
-    <div id="image-div">
+
+    <div id="img-div">
       <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ursula_Le_Guin_%283551195631%29_%28cropped%29.jpg/800px-Ursula_Le_Guin_%283551195631%29_%28cropped%29.jpg" alt="Image of Ursula Le Guin">
       <p id=img-caption>Ursula Le Guin in 2009</p>
     </div>
+
     <nav id="navbar">
       <ul id="navbar-list">
-        <li class="navbar-list-item"><a href="#">About</a></li>
-        <li class="navbar-list-item"><a href="#">Novels</a></li>
-        <li class="navbar-list-item"><a href="#">Short Stories</a></li>
-        <li class="navbar-list-item"><a href="#">Other Works</a></li>
+        <li class="navbar-list-item"><a href="#tribute-info">About</a></li>
+        <li class="navbar-list-item"><a href="#novels-div">Novels</a></li>
+        <li class="navbar-list-item"><a href="#short-stories-div">Short Stories</a></li>
+        <li class="navbar-list-item"><a href="#other-works-div">Other Works</a></li>
       </ul>
     </nav>
+
   </section>
-  <div id="tribute-info">
-    <p>From <a id="tribute-link" href="https://en.wikipedia.org/wiki/Ursula_K._Le_Guin" target="_blank">Wikipedia:</a></p>
-    <blockquote>Ursula Kroeber Le Guin (/ˈkroʊbər lə ˈɡwɪn/; October 21, 1929 – January 22, 2018) was an American author best known for her works of speculative fiction, including science fiction works set in her Hainish universe, and the Earthsea fantasy series. She was first published in 1959, and her literary career spanned nearly sixty years, yielding more than twenty novels and over a hundred short stories, in addition to poetry, literary criticism, translations, and children's books. Frequently described as an author of science fiction, Le Guin has also been called a "major voice in American Letters." Le Guin herself said she would prefer to be known as an "American novelist".</blockquote>
-  </div>
-  <hr>
-  <h2>Notable works</h2>
-  <div class="flex-container">
-    <div>
-      <p class="book-title">The Dispossessed</p><img src="https://upload.wikimedia.org/wikipedia/en/f/fc/TheDispossed(1stEdHardcover).jpg" alt="The Dispossessed">
+
+  <section id="content-section">
+
+    <div id="tribute-info"> <!-- given this id name to satisfy the project's requirements. Normally would id this as "about-div"-->
+      <div class="header-div">
+        <h2>About Ursula K. Le Guin</h2>
+      </div>
+      <div id="tribute-info-body">
+        <p>From <a id="tribute-link" href="https://en.wikipedia.org/wiki/Ursula_K._Le_Guin" target="_blank">Wikipedia:</a></p>
+        <blockquote>Ursula Kroeber Le Guin (/ˈkroʊbər lə ˈɡwɪn/; October 21, 1929 – January 22, 2018) was an American author best known for her works of speculative fiction, including science fiction works set in her Hainish universe, and the Earthsea fantasy series. She was first published in 1959, and her literary career spanned nearly sixty years, yielding more than twenty novels and over a hundred short stories, in addition to poetry, literary criticism, translations, and children's books. Frequently described as an author of science fiction, Le Guin has also been called a "major voice in American Letters." Le Guin herself said she would prefer to be known as an "American novelist".</blockquote>
+      </div>
     </div>
-    <div>
-      <p class="book-title">The Ones Who Walk Away From Omelas</p><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.tor.com%2Fwp-content%2Fuploads%2F2015%2F11%2FPlotted-LeGuin-AndrewDeGraff-fullsize.jpg&f=1&nofb=1" alt="The Ones Who Walk Away From Omelas">
+
+    <div id="novels-div">
+      <div class="header-div">
+        <h2>Novels</h2>
+      </div>
+      <div class="grid-container">
+
+        <div class="grid-item">
+          <h3 class="grid-item-title">The Dispossessed</h3>
+          <img class="grid-item-image" src="https://upload.wikimedia.org/wikipedia/en/f/fc/TheDispossed(1stEdHardcover).jpg" alt="Cover of The Dispossessed">
+          <div class="grid-item-body"><p>Duis iaculis sem et sem porta aliquet. Etiam vitae erat eget lorem ultrices mollis sit amet vitae augue. Proin posuere dui vitae nisl accumsan, sed feugiat metus fermentum. Mauris faucibus tortor sed leo blandit, vitae feugiat tellus lobortis. Curabitur nec efficitur erat. Etiam tempus auctor rhoncus. Vestibulum in elit sed quam tincidunt scelerisque.</p></div>
+        </div>
+
+        <div class="grid-item">
+          <h3 class="grid-item-title">The Left Hand of Darkness</h3>
+          <img class="grid-item-image" src="https://pictures.abebooks.com/isbn/9780060125745-us-300.jpg" alt="Cover of The Left Hand of Darkness">
+          <div class="grid-item-body"><p>Duis placerat tortor id iaculis posuere. Aenean a aliquet ipsum. Praesent maximus interdum lectus eu dictum. Suspendisse blandit porttitor purus at vulputate. Proin eget lectus sit amet ex varius suscipit in eu eros. Vestibulum ligula ligula, feugiat a sodales non, scelerisque vitae orci. Phasellus fermentum eu diam eu egestas. Nam congue risus augue. Donec rhoncus risus id dapibus sollicitudin.</p></div>
+        </div>
+
+        <div class="grid-item">
+          <h3 class="grid-item-title">The Other Wind</h3>
+          <img class="grid-item-image" src="https://images.squarespace-cdn.com/content/v1/5cad42ef90f904e520359371/1559053198010-JLGIB0Q4H52P7D2GMGOQ/ke17ZwdGBToddI8pDm48kGx2BFjnaKaeswrgZuJLPQRZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVEeB5_JGEpOptJ-51Vy8tXGDgwkrDGwOLrOUB5ydceH6xPA4YuZSFyo-V7VFbmFtlU/Other-Wind.jpg?format=300w" alt="Cover of The Other Wind">
+          <div class="grid-item-body"><p>From <a href="https://www.ursulakleguin.com/the-other-wind">Ursulaleguin.com</a>... "The sorcerer Alder fears sleep. He dreams of the land of death, of his wife who died young and longs to return to him so much that she kissed him across the low stone wall that separates our world from the Dry Land-where the grass is withered, the stars never move, and lovers pass without knowing each other. The dead are pulling Alder to them at night. Through him they may free themselves and invade Earthsea."</p></div>
+        </div>
+
+      </div>
     </div>
-    <div>
-      <p class="book-title">The Left Hand of Darkness</p><img src="https://pictures.abebooks.com/isbn/9780060125745-us-300.jpg" alt="The Left Hand of Darkness">
+
+    <div id="short-stories-div">
+      <div class="header-div">
+        <h2>Short Stories</h2>
+      </div>
+      <div class="grid-container">
+
+        <div class="grid-item">
+          <h3 class="grid-item-title">The Ones Who Walk Away From Omelas</h3>
+          <img class="grid-item-image" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.tor.com%2Fwp-content%2Fuploads%2F2015%2F11%2FPlotted-LeGuin-AndrewDeGraff-fullsize.jpg&f=1&nofb=1" alt="Image of The Ones Who Walk Away From Omelas">
+          <div class="grid-item-body"><p>Sed vitae dolor massa. Etiam rutrum tempor dapibus. Aliquam vitae egestas ante. Mauris metus tortor, lobortis eu ipsum non, dapibus pretium velit. Pellentesque vitae leo elit. Donec pretium diam at sapien viverra, id condimentum felis sagittis. Fusce mi lorem, elementum vitae imperdiet eu, aliquam sed tellus. Aliquam nec sodales diam. Proin sagittis augue in tellus luctus, sit amet rhoncus urna porttitor. Aenean fermentum quis lacus vitae ullamcorper. Vivamus ultricies cursus elit, in cursus eros tempus id. Fusce vitae libero finibus, convallis urna sit amet, vestibulum lacus. Sed rhoncus metus odio, ac tempor enim posuere non.</p></div>
+        </div>
+
+      </div>
     </div>
-  </div>
+
+    <div id="other-works-div">
+      <div class="header-div">
+        <h2>Other Works</h2>
+      </div>
+      <div class="grid-container">
+
+        <div class="grid-item">
+          <h3 class="grid-item-title">Steering the Craft</h3>
+          <img class="grid-item-image" src="https://images.squarespace-cdn.com/content/v1/5cad42ef90f904e520359371/1558114778894-98IN3TZAZCLFRXGLYWVK/ke17ZwdGBToddI8pDm48kKmII_UFWf1fIceEQLVkb8xZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGEliaNonuHspw0HZPwMmJaVE3abw3QsXe3HFJxedUUlt0eigcFaRk-NKDq2MUnnIE/41IhYq9rmqL.jpg?format=300w" alt="Cover Steering the Craft">
+          <div class="grid-item-body"><p><blockquote>Every year our schools teach less of an essential and once common knowledge, the technical language of speech and writing, the vocabulary of grammar. Words such as subject, predicate, object, or adjective and adverb, or past tense and past perfect tense, are half-understood or wholly unfamiliar to many.</blockquote>Read more at <a href="https://www.ursulakleguin.com/steering-the-craft">Ursulaleguin.com</a></p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
