@@ -11,6 +11,10 @@ font-family: 'Bitter', serif;
   box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Bitter', serif;
   margin: 0;
@@ -21,12 +25,17 @@ img {
   display: block;
 }
 
+i {
+    font-size: 2rem;
+}
+
 /*============
  typography
  =============*/
 
  h1 {
    font-size: 2rem;
+   color: white;
  }
 
  nav {
@@ -46,6 +55,11 @@ img {
  code {
    background-color: turquoise;
    padding: .125em .5em;
+ }
+
+ #title-span {
+  color: turquoise;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
 
 /*============
@@ -76,13 +90,6 @@ body {
   margin: .5em;
 }
 
-#navbar header {
-  align-self: center;
-  justify-self: center;
-  border: solid white;
-  padding: .5em;
-}
-
 #main-doc {
   grid-area: main;
   width: 95%;
@@ -90,7 +97,58 @@ body {
   margin: auto;
 }
 
-@media (min-width: 900px) {
+/* flip-box */
+
+.flip-box {
+    background-color: transparent;
+    width: 200px;
+    height: 100%;
+    perspective: 1000px; /*Remove this if you don't want the 3D effect*/
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side */
+  .flip-box-front {
+    background-color: transparent;
+    color: black;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: turquoise;
+    color: black;
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+  }
+
+@media (min-width: 1300px) {
   body {
     grid-template-areas: 
     "navbar main main main ";
@@ -112,6 +170,11 @@ body {
     margin: 1em;
     padding-right: 2em;
     border-right: solid turquoise;
+  }
+
+  .flip-box {
+    width: 100%;
+    height: 100px;
   }
 }
 
