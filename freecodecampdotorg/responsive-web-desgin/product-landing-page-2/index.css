@@ -1,12 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 
+/* colors */
+:root {
+  --red: #bc1823;
+  --gray: #efefef;
+}
+
+/* ==================
+global 
+=====================*/
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 img {
   display: block;
   width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #efefef;
 }
 
 /* ==================
@@ -17,14 +34,147 @@ body {
   font-family: 'Alice', serif;
 }
 
-#title {
+.title,
+#welcome-section i {
   font-size: 3.625rem;
+  line-height: 1;
 }
 
-#subtitle {
+#welcome-section i,
+.subtitle {
+  margin-bottom: 3.625rem;
+}
+
+.subtitle,
+.nav-list-item {
   font-size: 1.45rem;
 }
 
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list-link {
+  color: black;
+  background-color: var(--gray);
+  border: 2px solid black;
+}
+
+.btn {
+  color: white;
+  background-color: var(--red);
+}
+
+.nav-list-link,
+.btn {
+  text-decoration: none;
+  padding: .5em;
+  border-radius: 25px;
+  transition: all ease 200ms;
+}
+
+.nav-list-link:hover,
+.nav-list-link:focus {
+  color: var(--red);
+}
+
+.nav-list-link:hover,
+.nav-list-link:focus,
+.btn:hover,
+.btn:focus {
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .5);
+}
+
+
 /* ==================
 layout 
+=====================*/
+
+/* welcome section */
+
+#welcome-section {
+  position: relative;
+  height: 100vh;
+}
+
+#welcome-section::before {
+  content: '';
+  background-color: var(--red);
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  left: 70%;
+  z-index: -1;
+}
+
+.welcome-section-body-div {
+  position: absolute;
+  width: 75%;
+  max-width: 600px;
+  height: 50vw;
+  max-height: 75vh;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.welcome-section-image {
+  position: absolute;
+  border-radius: 50%;
+  width: 50vw;
+  height: 50vw;
+  max-width: 75vh;
+  max-height: 75vh;
+  object-fit: cover;
+  right: 30%;
+  top: 50%;
+  -ms-transform: translate(50% -50%);
+  transform: translate(50%, -50%);
+  z-index: -1;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* about section */
+
+#about {
+  position: relative;
+  height: 100vh;
+
+  border: solid blue;
+}
+
+.about-section-body-div {
+  position: absolute;
+  width: 75%;
+  max-width: 600px;
+  height: 50vw;
+  max-height: 75vh;
+  top: 50%;
+  right: 30%;
+  -ms-transform: translate(50% -50%);
+  transform: translate(50%, -50%);
+}
+
+.about-section-image {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  max-width: 75vh;
+  max-height: 75vh;
+  object-fit: cover;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+
+
+/* ==================
+components 
 =====================*/
